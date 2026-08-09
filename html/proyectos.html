@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos | Javier Costa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Poppins:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="barra-progreso-contenedor">
+            <div class="barra-progreso" id="barra-progreso"></div>
+        </div>
+        <div class="nav-expandido nav-container">
+            <a href="index.html" class="logo">Javier<span>Costa</span></a>
+            <button class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="proyectos.html" class="nav-link activo-link">Proyectos</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li> 
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header simplificado para la página interna -->
+    <header class="header-interno" style="padding: 150px 0 50px 0; text-align: center;">
+        <div class="contenedor">
+            <h1>Mis <span class="texto-gradiente">Proyectos</span></h1>
+            <p class="tagline">Soluciones reales a problemas complejos de negocio.</p>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <section class="proyectos-lista" style="display: flex; flex-direction: column; gap: 50px;">
+            
+            <!-- Proyecto 1 (El tuyo) -->
+            <div class="card-proyecto-moderna">
+                <div class="proyecto-imagen">
+                    <img src="/img/AA.png" alt="Sistema de Gestión">
+                </div>
+                <div class="proyecto-info">
+                    <h3>Getinweb</h3>
+                    <div class="etiquetas-tech">
+                        <span class="tag">PHP</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">C++</span>
+                    </div>
+                    <p>Plataforma web dinámica desarrollada para la administración de inventario y actualización de precios en tiempo real con una interfaz intuitiva y rápida.</p>
+                    <div style="display: flex; gap: 15px;">
+                        <a href="https://getinweb.cavernservices.org/index.php" class="btn" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        <a href="https://github.com/R0V1N2VV/GetInWeb-Proyecto" class="btn btn-secundario"><i class="fab fa-github"></i> Código</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto 2 (Simulado) -->
+            <div class="card-proyecto-moderna">
+                <div class="proyecto-imagen">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="API Dashboard">
+                </div>
+                <div class="proyecto-info">
+                    <h3>API REST para E-Commerce</h3>
+                    <div class="etiquetas-tech">
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Express</span>
+                        <span class="tag">PostgreSQL</span>
+                    </div>
+                    <p>Arquitectura Backend construida desde cero para soportar alto tráfico. Incluye autenticación JWT, pasarela de pagos y endpoints optimizados.</p>
+                    <a href="#" class="btn btn-secundario"><i class="fab fa-github"></i> Ver Repositorio</a>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer-moderno">
+        <div class="contenedor footer-grid">
+            <div class="footer-columna marca">
+                <a href="index.html" class="logo">Javier<span>Costa</span></a>
+                <p>Construyendo soluciones Backend eficientes, escalables y orientadas a resultados para potenciar tu negocio.</p>
+                <div class="redes-sociales-footer">
+                    <a href="https://github.com/ModuMod" class="btn-icono-pequeno"><i class="fab fa-github"></i></a>
+                    <a href="mailto:javiercosta@gmail.com" class="btn-icono-pequeno"><i class="fas fa-envelope"></i></a>
+
+                </div>
+            </div>
+            
+            <div class="footer-columna">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="proyectos.html">Proyectos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-columna">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> javiercosta@gmail.com</li>
+                    <li><i class="fas fa-phone"></i> +54 11 1234-5678</li>
+        
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="contenedor">
+                <p>&copy; 2026 Javier Costa. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/app.js"></script>
+</body>
+</html>

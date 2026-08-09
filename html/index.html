@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javier Costa | Desarrollo Web y Backend</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Poppins:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="barra-progreso-contenedor">
+            <div class="barra-progreso" id="barra-progreso"></div>
+        </div>
+        <div class="nav-expandido nav-container">
+            <a href="index.html" class="logo">Javier<span>Costa</span></a>
+            <button class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link activo-link">Inicio</a></li>
+                <li><a href="proyectos.html" class="nav-link">Proyectos</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li> 
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero" id="inicio">
+        <div class="hero-glow"></div>
+        <div class="contenedor hero-grid">
+            <div class="hero-texto">
+                <h1>Hola, soy <br><span class="texto-gradiente">Javier Costa</span></h1>
+                <p class="subtitulo">Desarrollador Web & Backend</p>
+                <p class="tagline">Construyo infraestructuras sólidas, escalables y eficientes para potenciar tu negocio. Especialista en PHP, SQL y C++.</p>
+                
+                <div class="hero-botones">
+                    <a href="proyectos.html" class="btn btn-primario">Ver Proyectos</a>
+                    <a href="contacto.html" class="btn btn-secundario">Contactarme</a>
+                </div>
+                
+                <div class="redes-sociales">
+                    <a href="https://github.com/ModuMod" class="btn-icono"><i class="fab fa-github"></i></a> <!-- Cambié IG por GitHub (más profesional) -->
+                    <a href="mailto:javiercosta@gmail.com" class="btn-icono"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            
+            <div class="hero-imagen-contenedor">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Código y desarrollo" class="imagen-flotante">
+            </div>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <!-- NUEVO: Sección de Experiencia / Timeline -->
+        <section id="experiencia" class="experiencia">
+            <h2>Trayectoria Profesional</h2>
+            <div class="timeline">
+                <div class="timeline-item card">
+                    <span class="fecha">2024 - Presente</span>
+                    <h3>Desarrollador Backend Freelance</h3>
+                    <p>Diseño e implementación de APIs RESTful, gestión de bases de datos relacionales y optimización de consultas SQL para clientes internacionales.</p>
+                </div>
+                <div class="timeline-item card">
+                    <span class="fecha">2022 - 2024</span>
+                    <h3>Programador Junior C++ / PHP</h3>
+                    <p>Mantenimiento de sistemas legacy, resolución de bugs y desarrollo de nuevos módulos para software de gestión empresarial (ERP).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- NUEVO: Stack Tecnológico -->
+      <!-- NUEVO: Stack Tecnológico con Imágenes -->
+        <section id="habilidades" class="habilidades">
+            <h2>Stack Tecnológico</h2>
+            <div class="grid-habilidades">
+                <div class="skill-tag">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="PHP"> PHP 8
+                </div>
+                <div class="skill-tag">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL"> MySQL
+                </div>
+                <div class="skill-tag">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"> PostgreSQL
+                </div>
+                <div class="skill-tag">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="C++"> C++
+                </div>
+                <div class="skill-tag">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" alt="Linux"> Servidores Linux
+                </div>
+                <div class="skill-tag">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript"> JavaScript
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-moderno">
+        <div class="contenedor footer-grid">
+            <div class="footer-columna marca">
+                <a href="index.html" class="logo">Javier<span>Costa</span></a>
+                <p>Construyendo soluciones Backend eficientes, escalables y orientadas a resultados para potenciar tu negocio.</p>
+                <div class="redes-sociales-footer">
+                    <a href="https://github.com/ModuMod" class="btn-icono-pequeno"><i class="fab fa-github"></i></a>
+                    <a href="mailto:javiercosta@gmail.com" class="btn-icono-pequeno"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-columna">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="proyectos.html">Proyectos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-columna">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> javiercosta@gmail.com</li>
+                    <li><i class="fas fa-phone"></i> +54 11 1234-5678</li>
+
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="contenedor">
+                <p>&copy; 2026 Javier Costa. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
