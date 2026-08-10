@@ -456,9 +456,28 @@ footer {
 }
 
 /* --- DISEÑO RESPONSIVO (MÓVILES) --- */
+/* =========================================
+   DISEÑO RESPONSIVO (TABLETS Y MÓVILES)
+   ========================================= */
+
+@media (max-width: 992px) {
+    /* Ajustes intermedios para tablets */
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+    .contenedor {
+        padding: 0 30px;
+    }
+}
+
 @media (max-width: 768px) {
+    /* --- Navegación --- */
     .menu-toggle {
         display: block;
+    }
+
+    .nav-expandido {
+        padding: 0 20px; /* Reducimos el padding lateral del nav */
     }
 
     .nav-menu {
@@ -478,24 +497,150 @@ footer {
         left: 0;
     }
 
-    .sobre-mi-grid, .card-proyecto-moderna, .hero-grid {
+    /* --- Secciones Principales --- */
+    .sobre-mi-grid, 
+    .card-proyecto-moderna, 
+    .hero-grid {
         grid-template-columns: 1fr;
     }
     
+    /* --- Hero Section --- */
+    .hero {
+        padding: 120px 0 60px 0; /* Reducimos el padding superior masivo */
+    }
+
     .hero-texto {
         text-align: center;
     }
 
     .hero h1 {
-        font-size: 3rem;
+        font-size: 2.8rem;
     }
 
-    .hero-botones, .redes-sociales {
+    .hero .tagline {
+        margin: 0 auto;
+    }
+
+    .hero-botones, 
+    .redes-sociales {
         justify-content: center;
     }
 
+    .imagen-flotante {
+        max-width: 300px; /* Reducimos el tamaño de la imagen en móvil */
+    }
+
+    /* --- Proyectos --- */
     .proyecto-imagen img {
         height: 250px;
+        border-radius: 16px 16px 0 0; /* Ajuste para que los bordes coincidan en modo columna */
+    }
+
+    .proyecto-info {
+        padding: 25px; /* Menos padding interno en móviles */
+    }
+
+    /* --- Contacto --- */
+    .contacto-grid {
+        grid-template-columns: 1fr;
+        padding: 25px;
+    }
+
+    /* --- Footer --- */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer-columna h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .footer-columna ul li {
+        justify-content: center;
+    }
+    
+    .footer-columna p {
+        max-width: 100%;
+        margin: 15px auto;
+    }
+    
+    .redes-sociales-footer {
+        justify-content: center;
+        display: flex;
+        gap: 15px;
+    }
+}
+
+/* =========================================
+   DISEÑO PARA MÓVILES PEQUEÑOS (SMARTPHONES)
+   ========================================= */
+@media (max-width: 480px) {
+    
+    /* Textos del Hero */
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero .subtitulo {
+        font-size: 1.2rem;
+    }
+
+    /* Botones apilados al 100% del ancho */
+    .hero-botones {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .btn, .btn-primario, .btn-secundario {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    /* Trayectoria Profesional (Timeline) ajustado */
+    .timeline {
+        padding-left: 20px;
+    }
+
+    .timeline::before {
+        left: 0;
+    }
+
+    .timeline-item::before {
+        left: -26px; /* Alinear el punto con la nueva posición de la línea */
+        width: 14px;
+        height: 14px;
+        top: 28px;
+    }
+
+    .timeline-item.card {
+        padding: 25px 15px; /* Reducir padding de la tarjeta */
+    }
+
+    /* Habilidades */
+    .grid-habilidades {
+        gap: 10px;
+    }
+    
+    .skill-tag {
+        width: 100%; /* Las etiquetas ocupan todo el ancho disponible */
+        justify-content: center;
+    }
+
+    /* Cajas de contacto largas (para evitar scroll horizontal por el email) */
+    .info-item-grande {
+        flex-direction: column;
+        font-size: 1rem;
+        padding: 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .header-interno {
+        padding: 120px 0 40px 0 !important;
     }
 }
 /* --- UX: BARRA DE PROGRESO Y SPY SCROLL --- */
