@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const btnTheme = document.getElementById("btn-theme");
     const iconoTheme = btnTheme.querySelector("i");
-    const sonidoTheme = new Audio('click.wav');
+    const sonidoTheme = new Audio('Sounds/click.wav');
     sonidoTheme.volume = 0.2;
     
     const temaGuardado = localStorage.getItem("tema_portfolio");
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const btnSubir = document.getElementById("btn-subir");
-    const sonidoSubir = new Audio('click1.wav');
+    const sonidoSubir = new Audio('Sounds/click1.wav');
     sonidoSubir.volume = 0.2;
 
     if (btnSubir) {
