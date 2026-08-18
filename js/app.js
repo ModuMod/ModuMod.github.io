@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
     sonidoSubir.volume = 0.5;
     
     const sonidoBotonMute = new Audio('Sounds/Click3.ogg'); 
-    sonidoBotonMute.volume = 1;
+    sonidoBotonMute.volume = 1.1;
 
     const btnMute = document.getElementById("btn-mute");
     const iconoMute = btnMute.querySelector("i");
