@@ -12,11 +12,30 @@
 </head>
     
 <body>
+    <div id="pantalla-inicio" class="pantalla-inicio">
+    <canvas id="canvas-intro"></canvas>
+
+    <div class="hud-esquina top-left"></div>
+    <div class="hud-esquina top-right"></div>
+    <div class="hud-esquina bottom-left"></div>
+    <div class="hud-esquina bottom-right"></div>
+
+    <div class="contenido-inicio">
+        <h1 class="titulo-inicio glitch" data-text="JAVIER COSTA">JAVIER COSTA</h1>
+        <p class="subtitulo-inicio">DESARROLLADOR GRÁFICO</p>
+        <span class="parpadeo-click">[ Tocá la pantalla para inicializar sistema ]</span>
+    </div>
+</div>
+</div>
+<canvas id="canvas-fondo"></canvas>
 
     <div id="bg-flashlight"></div>
 
     <button id="btn-theme" class="btn-theme-toggle" aria-label="Cambiar tema">
         <i class="fas fa-sun"></i>
+    </button>
+    <button id="btn-mute" class="btn-mute-toggle" aria-label="Silenciar página">
+        <i class="fas fa-volume-up"></i>
     </button>
 
     <div class="layout-container">
@@ -48,6 +67,7 @@
         <main class="col-derecha">
             
             <section id="sobre-mi" class="seccion-bloque">
+                <h2>Centrado en</h2>
                 <p>Especialista en desarrollo backend. </p>
                 <p>Estoy enfocado en la creación de soluciones eficientes y escalables. Cuento con experiencia de consultas en bases de datos relacionales y mantenimiento de sitios web.</p>
                 <p>Mi objetivo principal es aportar lo que se a proyectos mediante código limpio y estructurado</p>
