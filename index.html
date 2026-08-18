@@ -4,30 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javier Costa | Desarrollador Backend</title>
+    
+    <!-- Fuentes y estilos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@600;700&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <link rel="stylesheet" href="css/estilos.css">
 </head>
-    
 <body>
+
     <div id="pantalla-inicio" class="pantalla-inicio">
-    <canvas id="canvas-intro"></canvas>
+        <canvas id="canvas-intro"></canvas>
 
-    <div class="hud-esquina top-left"></div>
-    <div class="hud-esquina top-right"></div>
-    <div class="hud-esquina bottom-left"></div>
-    <div class="hud-esquina bottom-right"></div>
+        <div class="hud-esquina top-left"></div>
+        <div class="hud-esquina top-right"></div>
+        <div class="hud-esquina bottom-left"></div>
+        <div class="hud-esquina bottom-right"></div>
 
-    <div class="contenido-inicio">
-        <h1 class="titulo-inicio glitch" data-text="JAVIER COSTA">JAVIER COSTA</h1>
-        <p class="subtitulo-inicio">DESARROLLADOR GRÁFICO</p>
-        <span class="parpadeo-click">[ Tocá la pantalla para inicializar sistema ]</span>
+        <div class="contenido-inicio">
+            <h1 class="titulo-inicio">JAVIER COSTA</h1>
+            <p class="subtitulo-inicio">INFRAESTRUCTURA & BACKEND</p>
+            <span class="parpadeo-click">[ Tocá la pantalla para continuar ]</span>
+        </div>
     </div>
-</div>
-</div>
-<canvas id="canvas-fondo"></canvas>
+
+    <canvas id="canvas-fondo"></canvas>
 
     <div id="bg-flashlight"></div>
 
@@ -42,7 +46,7 @@
         
         <aside class="col-izquierda">
             <div class="header-info">
-                <h1><span id="nombre-tipeo" class="texto-gradiente fuente-llamativa"></span><span class="cursor">|</span></h1>
+                <h1><span id="nombre-tipeo" class="texto-gradiente fuente-llamativa"></span></h1>
                 <p class="subtitulo">Especialista Backend</p>
                 <p class="tagline">Construyo infraestructuras sólidas, escalables y eficientes en diferentes lenguajes</p>
                 
@@ -68,51 +72,55 @@
             
             <section id="sobre-mi" class="seccion-bloque">
                 <h2>Centrado en</h2>
-                <p>Especialista en desarrollo backend. </p>
+                <p>Especialista en desarrollo backend.</p>
                 <p>Estoy enfocado en la creación de soluciones eficientes y escalables. Cuento con experiencia de consultas en bases de datos relacionales y mantenimiento de sitios web.</p>
-                <p>Mi objetivo principal es aportar lo que se a proyectos mediante código limpio y estructurado</p>
+                <p>Mi objetivo principal es aportar valor a proyectos mediante código limpio y estructurado.</p>
             </section>
 
             <section id="proyectos" class="seccion-bloque">
                 <h2>Proyectos</h2>
                 <div class="lista-proyectos">
-                    
-                    <div class="card-proyecto-moderna">
-                        <div class="proyecto-imagen">
-                            <img src="img/AA.png" alt="Getinweb Preview">
-                        </div>
-                        <div class="proyecto-info">
-                            <h3>Getinweb</h3>
-                            <div class="etiquetas-tech">
-                                <span class="tag">PHP</span>
-                                <span class="tag">MySQL</span>
-                                <span class="tag">C++</span>
-                            </div>
-                            <p>Plataforma web dinámica desarrollada para la administración de inventario y actualización de precios en tiempo real.</p>
-                            <div class="enlaces-proyecto">
-                                <a href="https://getinweb.cavernservices.org/index.php" class="btn" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
-                                <a href="https://github.com/R0V1N2VV/GetInWeb-Proyecto" class="btn btn-secundario" target="_blank"><i class="fab fa-github"></i> Código</a>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="card-proyecto-moderna">
-                        <div class="proyecto-imagen">
-                            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80" alt="API REST Preview">
+                    <!-- Proyecto 1 -->
+                    <article class="card-proyecto-horizontal">
+                        <div class="proyecto-thumb">
+                            <img src="/img/Pag1.png" alt="Getinweb">
                         </div>
-                        <div class="proyecto-info">
-                            <h3>API REST para E-Commerce</h3>
+                        <div class="proyecto-contenido">
+                            <h3>
+                                <a href="https://modumod.github.io/NOVA/" target="_blank">
+                                   NOVA<i class="fas fa-arrow-up-right-from-square icono-link"></i>
+                                </a>
+                            </h3>
+                            <p>Sitio web institucional minimalista y de alta gama, diseñado para estudios de arquitectura. Destaca por su experiencia inmersiva con animaciones fluidas al hacer scroll, cursor personalizado, efectos parallax y una estética visual muy elegante.</p>
                             <div class="etiquetas-tech">
-                                <span class="tag">Node.js</span>
-                                <span class="tag">Express</span>
-                                <span class="tag">PostgreSQL</span>
-                            </div>
-                            <p>Arquitectura Backend construida para soportar alto tráfico. Incluye autenticación JWT, pasarela de pagos y endpoints optimizados.</p>
-                            <div class="enlaces-proyecto">
-                                <a href="#" class="btn btn-secundario"><i class="fab fa-github"></i> Repositorio</a>
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
                             </div>
                         </div>
-                    </div>
+                    </article>
+
+                    <!-- Proyecto 2 -->
+                    <article class="card-proyecto-horizontal">
+                        <div class="proyecto-thumb">
+                            <img src="/img/Pag2.png" alt="E-Commerce REST">
+                        </div>
+                        <div class="proyecto-contenido">
+                            <h3>
+                                <a href="https://modumod.github.io/NexusGrowth/" target="_blank">
+                                    NexusGrowth <i class="fas fa-arrow-up-right-from-square icono-link"></i>
+                                </a>
+                            </h3>
+                            <p>Landing page interactiva de alta conversión orientada a agencias digitales. Incluye funciones avanzadas como modo oscuro/claro, efecto de escritura dinámica, contadores estadísticos animados, slider personalizado y validación de formularios en tiempo real.</p>
+                            <div class="etiquetas-tech">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </article>
+                   
 
                 </div>
             </section>
@@ -120,36 +128,42 @@
             <section id="habilidades" class="seccion-bloque">
                 <h2>Habilidades</h2>
                 <div class="grid-habilidades">
-                    <div class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="PHP"> PHP</div>
-                    <div class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS"> CSS</div>
-                    <div class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML"> HTML</div>
-                    <div class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript"> JavaScript</div>
-                    <div class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL"> MySQL</div>
-                    <div class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="C++"> C++</div>
+                    <div class="skill-tag">
+                        <i class="fab fa-php" style="color: #777bb4;"></i> PHP
+                    </div>
+                    <div class="skill-tag">
+                        <i class="fas fa-database" style="color: #00758f;"></i> SQL / MySQL
+                    </div>
+                    <div class="skill-tag">
+                        <i class="fas fa-code" style="color: #00599c;"></i> C++
+                    </div>
+                    <div class="skill-tag">
+                        <i class="fab fa-js" style="color: #f7df1e;"></i> JavaScript
+                    </div>
+                    <div class="skill-tag">
+                        <i class="fab fa-html5" style="color: #e34f26;"></i> HTML5
+                    </div>
+                    <div class="skill-tag">
+                        <i class="fab fa-css3-alt" style="color: #1572b6;"></i> CSS
+                    </div>
                 </div>
             </section>
 
             <section id="contacto" class="seccion-bloque">
                 <h2>Contacto</h2>
                 <div class="card-contacto-imagen">
-                    <h3 class="contacto-titulo">¿Tenés un proyecto en mente?</h3>
-                    <p class="contacto-descripcion">
-                        Priorizo la comunicación clara y el código escalable. Ya sea que necesites una integración compleja de bases de datos o desarrollar un sistema a medida, hablemos sobre cómo puedo aportar mis conocimientos técnicos a tu negocio.
-                    </p>
-                    
+                    <h3 class="contacto-titulo">¿Trabajamos juntos?</h3>
+                    <p class="contacto-descripcion">Estoy disponible para nuevos proyectos e infraestructura backend. Podés escribirme directamente por cualquiera de estos medios:</p>
                     <div class="contacto-pill-container">
                         <a href="mailto:javiercosta@gmail.com" class="contacto-pill">
-                            <i class="fas fa-envelope"></i>
-                            <span>javiercosta@gmail.com</span>
+                            <i class="fas fa-envelope"></i> javiercosta@gmail.com
                         </a>
                         <a href="https://wa.me/541112345678" target="_blank" class="contacto-pill">
-                            <i class="fas fa-phone-alt"></i>
-                            <span>+54 11 1234-5678</span>
+                            <i class="fab fa-whatsapp"></i> WhatsApp
                         </a>
                     </div>
-
                     <div class="contacto-accion">
-                        <a href="mailto:javiercosta@gmail.com" class="btn-contacto-destacado">Escribime un correo</a>
+                        <a href="mailto:javiercosta@gmail.com" class="btn-contacto-destacado">Enviar Mensaje</a>
                     </div>
                 </div>
             </section>
@@ -160,9 +174,11 @@
 
         </main>
     </div>
-<button id="btn-subir" class="btn-subir" aria-label="Volver arriba">
+
+    <button id="btn-subir" class="btn-subir" aria-label="Volver arriba">
         <i class="fas fa-arrow-up"></i>
-</button>
+    </button>
+
     <script src="js/app.js"></script>
 </body>
 </html>
