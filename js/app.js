@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+    
+    // Pantalla de Inicio / Landing Intro
     const pantallaInicio = document.getElementById("pantalla-inicio");
     const canvasIntro = document.getElementById('canvas-intro');
     
@@ -6,6 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
     sonidoBoot.volume = 0.8;
 
     if (pantallaInicio) {
+        let manejarResizeIntro;
+
         pantallaInicio.addEventListener("click", () => {
             sonidoBoot.currentTime = 0; 
             sonidoBoot.play().catch(e => console.log(e));
@@ -14,6 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
             
             setTimeout(() => {
                 pantallaInicio.remove(); 
+                if (manejarResizeIntro) {
+                    window.removeEventListener('resize', manejarResizeIntro);
+                }
             }, 1000); 
         });
 
@@ -87,19 +94,22 @@ document.addEventListener("DOMContentLoaded", () => {
                 requestAnimationFrame(animarIntro);
             }
 
-            window.addEventListener('resize', () => {
-                if(canvasIntro) {
+            manejarResizeIntro = () => {
+                if (canvasIntro && document.getElementById("pantalla-inicio")) {
                     canvasIntro.width = window.innerWidth;
                     canvasIntro.height = window.innerHeight;
                     initIntro();
                 }
-            });
+            };
+
+            window.addEventListener('resize', manejarResizeIntro);
 
             initIntro();
             animarIntro();
         }
     }
    
+    // Linterna de Fondo
     const bgFlashlight = document.getElementById("bg-flashlight");
     
     document.addEventListener("mousemove", (e) => {
@@ -107,13 +117,11 @@ document.addEventListener("DOMContentLoaded", () => {
         bgFlashlight.style.setProperty("--bg-y", `${e.clientY}px`);
     });
 
-    const sonidoTheme = new Audio('Sounds/click.wav');
+    // Control de Sonidos
+    const sonidoTheme = new Audio('Sounds/Modo.wav');
     sonidoTheme.volume = 1;
-    const sonidoSubir = new Audio('Sounds/click1.wav');
+    const sonidoSubir = new Audio('Sounds/Subida.wav');
     sonidoSubir.volume = 0.5;
-    
-    const sonidoBotonMute = new Audio('Sounds/Click3.ogg'); 
-    sonidoBotonMute.volume = 1;
 
     const btnMute = document.getElementById("btn-mute");
     const iconoMute = btnMute.querySelector("i");
@@ -124,12 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     btnMute.addEventListener("click", () => {
-        
-        sonidoBotonMute.currentTime = 0.2; 
-        sonidoBotonMute.play().catch(error => {
-            console.log("Audio a la espera de interacción del usuario.", error);
-        });
-
+        // Se eliminó la reproducción del sonidoBotonMute aquí
         isMuted = !isMuted;
         localStorage.setItem("portfolio_muted", isMuted); 
         
@@ -140,6 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    // Cambio de Tema (Oscuro / Claro)
     const btnTheme = document.getElementById("btn-theme");
     const iconoTheme = btnTheme.querySelector("i");
     
@@ -169,6 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    // Efecto de Tipeo en el Nombre
     const textoNombre = "Javier Costa";
     const contenedorNombre = document.getElementById("nombre-tipeo");
     let i = 0;
@@ -183,6 +188,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     escribirTexto();
 
+    // Navegación Activa según el Scroll
     const secciones = document.querySelectorAll('.seccion-bloque');
     const navLinks = document.querySelectorAll('.nav-fija .nav-link');
 
@@ -209,7 +215,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     secciones.forEach(seccion => observer.observe(seccion));
 
-    const cards = document.querySelectorAll('.card-proyecto-moderna');
+    // Posición del Cursor dentro de las Tarjetas Horizontales
+    const cards = document.querySelectorAll('.card-proyecto-horizontal');
     
     cards.forEach(card => {
         card.addEventListener('mousemove', e => {
@@ -222,6 +229,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // Botón Volver Arriba
     const btnSubir = document.getElementById("btn-subir");
 
     if (btnSubir) {
@@ -234,7 +242,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         btnSubir.addEventListener("click", () => {
-            
             if (!isMuted) {
                 sonidoSubir.currentTime = 0.1; 
                 sonidoSubir.play().catch(error => {
@@ -251,6 +258,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+// Red de Nodos en Fondo (Canvas Secundario)
 const canvasNodos = document.getElementById('canvas-fondo');
 if (canvasNodos) {
     const ctx = canvasNodos.getContext('2d');
@@ -265,7 +273,7 @@ if (canvasNodos) {
             r: isClaro ? 14  : 56,   
             g: isClaro ? 116 : 189,
             b: isClaro ? 144 : 248,
-            opacidadNodo: isClaro ? 1 : 1 
+            opacidadNodo: 1 
         };
     }
 
